@@ -1,1 +1,1 @@
-web: gunicorn ticket.wsgi --log-file -
+web: gunicorn user.wsgi --log-file -
