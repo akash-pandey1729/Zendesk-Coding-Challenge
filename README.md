@@ -3,19 +3,15 @@ Django Based Ticket Viewer
 
 The assignment has been made using Django. Important methods have been scripted in [views.py](https://github.com/milind-prajapat/Zendesk-Coding-Challenge/blob/main/ticket/views.py). Exception handling has been put in place, and Unit testing codes have been written in [test.py](https://github.com/milind-prajapat/Zendesk-Coding-Challenge/blob/main/ticket/views.py).
 
-It has also been hosted on <> for quick reference.
-
 ## Installation
-#### Method 1: Website
-<>
 
-#### Method 2: Manually 
+#### Method 1: Manually 
 1. Clone this repository
 2. Activate the virtual environment ```source env/Scripts/activate``` 
 3. Install the packages using [requirement.txt](https://github.com/milind-prajapat/Zendesk-Coding-Challenge/blob/main/requirements.txt) ```python3 -m pip install -r requirements.txt```
 4. Finally, start the server using ```python3 manage.py runserver```
 
-#### Method 3:
+#### Method 2:
 Alternatively, if you have Visual Studio, open the [Zendesk-Coding-Challenge.sln](https://github.com/milind-prajapat/Zendesk-Coding-Challenge/blob/main/Zendesk-Coding-Challenge.sln) and run the server directly from Visual Studio.
 
 ## Instructions to Use:
