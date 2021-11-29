@@ -1,0 +1,51 @@
+{% extends 'ticket/base.html' %}
+
+{% block content %}
+    
+    {% if auth %}
+        {% if length %}
+            {% for ticket in tickets %}
+                <article class="media content-section">
+                    <div class="media-body">
+                        <h2><a class="article-title" href="{{ticket.index}}">{{ ticket.subject }}</a></h2>
+                        <p class="article-content">{{ ticket.description }}</p>
+                    </div>
+                </article>
+            {% endfor %}
+
+            {% if page_obj.has_previous %}
+                <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                    <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                    <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+                {% endif %}
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+            {% endif %}
+        {% else %}
+
+            <h2>Your account has no tickets available!</h2>
+            <div class="border-top pt-3"></div>
+            
+        {% endif %}
+
+    {% else %}
+
+        <h2>Login to see ticket details</h2>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                <a href={% url 'user-login' %}>Log In</a>
+            </small>
+        </div>
+
+    {% endif %}
+
+{% endblock %}

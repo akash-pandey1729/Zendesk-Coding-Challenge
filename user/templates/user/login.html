@@ -1,0 +1,72 @@
+{% extends 'ticket/base.html' %}
+
+{% block content %}
+    
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} m-2" id="msg" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    
+    <div class="content-section">
+        <form method="POST">
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Log In</legend>
+
+                <div id="div_id_username" class="control-group">
+                    <label for="id_username" class="control-label requiredField">
+                        Email-Id<span class="asteriskField">*</span>
+                    </label>
+
+                    <div class="controls">
+                        <input type="text" name="username" maxlength="150" class="textinput textInput" required id="id_username">
+                    </div>
+                </div>
+
+                <p></p>
+
+                <div id="div_id_subdomain" class="control-group">
+                    <label for="id_subdomain" class="control-label requiredField">
+                        Subdomain<span class="asteriskField">*</span>
+                    </label>
+
+                    <div class="controls">
+                        <input type="text" name="subdomain" maxlength="150" class="textinput textInput" required id="id_subdomain">
+                    </div>
+                </div>
+
+                <p></p>
+
+                <div id="div_id_password" class="control-group">
+                    <label for="id_password" class="control-label requiredField">
+                        Api-Token<span class="asteriskField">*</span>
+                    </label>
+
+                    <div class="controls">
+                        <input type="password" name="password" maxlength="256" class="textinput textInput" required id="id_password">
+                    </div>
+                </div>
+
+                <p></p>
+
+            </fieldset>
+
+            {% csrf_token %}
+
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        setTimeout(function () {
+            if ($('#msg').length > 0) {
+                $('#msg').remove();
+            }
+        }, 3000)
+    </script>
+
+{% endblock %}

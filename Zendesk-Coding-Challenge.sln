@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Zendesk-Coding-Challenge", "Zendesk-Coding-Challenge.pyproj", "{985228B7-5F5B-4506-9FC1-8D64110805B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{985228B7-5F5B-4506-9FC1-8D64110805B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{985228B7-5F5B-4506-9FC1-8D64110805B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{985228B7-5F5B-4506-9FC1-8D64110805B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{985228B7-5F5B-4506-9FC1-8D64110805B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDBB0CA4-8DAC-4A99-B8B0-7F271984680E}
+	EndGlobalSection
+EndGlobal
