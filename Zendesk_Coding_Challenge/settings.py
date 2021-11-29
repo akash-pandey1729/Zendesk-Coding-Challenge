@@ -25,7 +25,7 @@ SECRET_KEY = '7b8acd91-26ce-4caa-ba24-31edcdd5cc58'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1/']
+ALLOWED_HOSTS = ['127.0.0.1', 'zendesk-zcc.herokuapp.com']
 
 # Application references
 # https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS
