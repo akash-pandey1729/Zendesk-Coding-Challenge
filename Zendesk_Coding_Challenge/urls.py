@@ -23,8 +23,7 @@ from django.urls import path, include
 import ticket.views as ticket_views
 import user.views as user_views
 
-from django.views.static import serve
-from django.conf.urls import url
+
 urlpatterns = [
     # Uncomment the next line to enable the admin:
     #path('admin/', admin.site.urls),
@@ -36,7 +35,4 @@ urlpatterns = [
 
     path('home/', ticket_views.home, name = 'ticket-home'),
     path('about/', ticket_views.about, name = 'ticket-about'),
-
-    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]
