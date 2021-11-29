@@ -1,1 +1,1 @@
-web: gunicorn user.wsgi --log-file -
+web: gunicorn Zendesk_Coding_Challenge.wsgi --log-file -
